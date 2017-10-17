@@ -5,25 +5,17 @@
 
 import numpy as np
 
-"""Function used to compute the loss."""
-def compute_loss_mse(y, tx, w):
-    """Calculate the loss.
+"""Functions used to compute the loss."""
 
-    You can calculate the loss using mse or mae.
-    """
-    # ***************************************************
-    # INSERT YOUR CODE HERE 
-    
+def compute_loss_mse(y, tx, w):
     e = y - np.sum(tx*w, axis = 1)
     n = y.shape[0]
     scalaire = (1.0/(2.0*n))
     cost_matrix = (1.0/(2.0*n)) * (e * e)
     
     return np.sum(cost_matrix)
-    # TODO: compute loss by MSE
-    # ***************************************************
-    
-    
+
+
 def compute_loss_mae(y, tx, w):
     e = y - np.sum(tx*w, axis = 1)
     n = y.shape[0]
