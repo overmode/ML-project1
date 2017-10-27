@@ -19,7 +19,6 @@ def split_data(x, y, ratio, seed=1):
     # split the data based on the given ratio: TODO
     # ***************************************************
     stop = int(x.shape[0] * ratio)
-    print(stop)
     xT = x[shuffle][:stop]
     yT = y[shuffle][:stop]
     xV = x[shuffle][stop:]
