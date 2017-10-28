@@ -11,6 +11,8 @@ def split_data(x, y, ratio, seed=1):
     you will have 80% of your data set dedicated to training 
     and the rest dedicated to testing
     """
+    print("x shape = ",x.shape)
+    print("y shape = ",y.shape)
     # set seed
     np.random.seed(seed)
     shuffle = np.random.permutation(x.shape[0])
